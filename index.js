@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({
 const PORT = 8080;
 const HOST = '0.0.0.0';
 
-mongoose.connect("mongodb://localhost:27017/test", {useNewUrlParser: true});
+mongoose.connect("mongodb://mongo:27017/test", {useNewUrlParser: true});
 
 const contactSchema = {
   email: String,

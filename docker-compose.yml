@@ -2,15 +2,17 @@ version: '2'
 
 services:
   api:
-    container_name: Api Container
+    container_name: Api-Container
     build: .
     ports:
       - 80:8080
     depends_on:
       - mongo
+    links:
+      - mongo
 
   mongo:
-    container_name: db container
+    container_name: DB-Container
     image: mongo:latest
     ports:
       - 27017:27017

@@ -16,4 +16,4 @@ COPY . .
 EXPOSE 8080
 
 ### Last run the node script 
-CMD [ "node", "index.js" ]
+CMD [ "npm", "start" ]
