@@ -1,0 +1,27 @@
+{
+  "name": "nodejs-docker",
+  "version": "1.0.0",
+  "description": "NodeJs With Docker Example",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abhishek-shah15/nodejs-docker.git"
+  },
+  "keywords": [
+    "Nodejs",
+    "Docker"
+  ],
+  "author": "Abhishek Shah",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abhishek-shah15/nodejs-docker/issues"
+  },
+  "homepage": "https://github.com/abhishek-shah15/nodejs-docker#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
