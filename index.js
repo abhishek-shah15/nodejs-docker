@@ -3,6 +3,7 @@ const app = express();
 const bodyParser = require("body-parser"); 
 const mongoose = require('mongoose');
 
+app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ 
   extended: true
 })); 
@@ -24,13 +25,13 @@ app.post("/contact", function (req, res) {
       email: req.body.email,
       query: req.body.query,
   });
-  contact.save(function (err) {
-      if (err) {
-        res.send("Error Occurred");
-      } else {
-        res.send("Contact Save");
-      }
-  });
+  contact.save()
+    .then(item => {
+      res.status(200).send("Details saved to database");
+    })
+    .catch(err => {
+      res.status(400).send("Unable to save to database");
+    });
 });
 
 app.get('/', function (req, res) {
